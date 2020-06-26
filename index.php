@@ -4,7 +4,7 @@ $user = 'kubota';
 $password = '4191121shiba@KTjp';
 try {
     $dbh = new PDO($dsn, $user, $password);
-    $sql = "select * from sample; ";
+    $sql = "select * from user; ";
 	$result = $dbh->query($sql);
 } catch (PDOException $e) {
     print "Failed: " . $e->getMessage() . "\n";
@@ -66,9 +66,9 @@ try {
                     <tbody>
                         <?php foreach($result as $value) { ?>
                         <tr>
-                            <th><?php echo "value[id]"; ?></th>
-                            <td><?php echo "value[name]"; ?></td>
-                            <td><?php echo "value[age]"; ?></td>
+                            <th><?php echo "$value[id]"; ?></th>
+                            <td><?php echo "$value[name]"; ?></td>
+                            <td><?php echo "$value[age]"; ?></td>
                         </tr>
                         <?php } ?>
                     </tbody>
