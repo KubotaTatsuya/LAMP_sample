@@ -4,7 +4,7 @@ $user = 'kubota';
 $password = '4191121shiba@KTjp';
 try {
     $dbh = new PDO($dsn, $user, $password);
-    $dbh->collator_set_attribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $dbh->set_attribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $id = $_POST['id'];
     $name = $_POST['name'];
