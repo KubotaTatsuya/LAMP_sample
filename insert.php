@@ -1,10 +1,10 @@
 <?php
 
-$dsn = 'mysql:dbname=sample_db;host=localhost;';
+$dsn = 'mysql:dbname=test_db;host=localhost;';
 
-$user = 'otsubo';
+$user = 'kubota';
 
-$password = 'morijyobi';
+$password = '4191121shiba@KTjp';
 
 try {
 
