@@ -7,6 +7,7 @@ $user = 'kubota';
 $password = '4191121shiba@KTjp';
 
 
+
 try {
 
     $dbh = new PDO($dsn, $user, $password);
