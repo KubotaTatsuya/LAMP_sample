@@ -6,6 +6,7 @@ $user = 'kubota';
 
 $password = '4191121shiba@KTjp';
 
+
 try {
 
     $dbh = new PDO($dsn, $user, $password);
@@ -15,6 +16,8 @@ try {
 
 
     $id = $_GET['id'];
+
+
 
     $sql = "delete from user where id=:id";
 

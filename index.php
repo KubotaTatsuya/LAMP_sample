@@ -90,9 +90,37 @@ try {
 
 	</div>
 
-
-
 	<div class="container">
+
+    <?php if ($_GET['fg'] == 1) { ?>
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+
+    Processing complete. <strong>Success!!</strong>
+
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+        <span aria-hidden="true">&times;</span>
+
+    </button>
+
+</div>
+
+<?php } else if ($_GET['fg'] == 2) { ?>
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+
+    Processing complete. <strong>Failed!!</strong>
+
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+        <span aria-hidden="true">&times;</span>
+
+    </button>
+
+</div>
+
+<?php } ?>
 
 		<ul class="nav nav-tabs">
 
@@ -270,7 +298,57 @@ try {
 
 			<div class="tab-pane" id="delete">
 
-				<p>sample tab 4</p>
+				<table class="table table-hover mt-2">
+
+					<caption>Show User Table</caption>
+
+					<thead class="thead-dark">
+
+						<tr>
+
+							<th>Id</th>
+
+							<th>Name</th>
+
+							<th>Age</th>
+
+							<th>-</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody>
+
+						<?php foreach ($result2 as $value) { ?>
+
+							<tr>
+
+								<th><?php echo "$value[id]"; ?></th>
+
+								<td><?php echo "$value[name]"; ?></td>
+
+								<td><?php echo "$value[age]"; ?></td>
+
+								<td>
+
+									<form action="./delete.php" method="GET">
+
+										<input class="d-none" type="text" name="id" value="<?php echo "$value[id]"; ?>">
+
+										<button class="btn btn-danger" type="submit">delete</button>
+
+									</form>
+
+								</td>
+
+							</tr>
+
+						<?php } ?>
+
+					</tbody>
+
+				</table>
 
 			</div>
 
