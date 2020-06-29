@@ -1,6 +1,9 @@
 <?php
+
 $dsn = 'mysql:dbname=test_db;host=localhost;';
+
 $user = 'kubota';
+
 $password = '4191121shiba@KTjp';
 
 try {
