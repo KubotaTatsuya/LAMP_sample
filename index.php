@@ -117,9 +117,22 @@ try {
         </div>
     </form>
 
+     </div>
+        <div class="tab-pane" id="update">
+            <form action="./update.php" method="POST">
+            <div class="form-group row">
+                 <label for="id" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                     <input type="text" class="form-control" id="id" name="id">
+                 </div>
+             </div>
+            <div class="form-group row">
+                 <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" name="name">
             </div>
-            <div class="tab-pane" id="update">
-                <p>sample tab 3</p>
+        </div>
+    </form>
             </div>
             <div class="tab-pane" id="delete">
                 <p>sample tab 4</p>
